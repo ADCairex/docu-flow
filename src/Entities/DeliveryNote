@@ -1,0 +1,38 @@
+{
+  "name": "DeliveryNote",
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string",
+      "description": "Nombre del cliente"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha del albar\u00e1n"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Referencia del albar\u00e1n"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processed"
+      ],
+      "default": "pending",
+      "description": "Estado del albar\u00e1n"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    }
+  },
+  "required": [
+    "customer_name",
+    "date",
+    "reference",
+    "status"
+  ]
+}

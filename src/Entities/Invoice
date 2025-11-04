@@ -1,0 +1,38 @@
+{
+  "name": "Invoice",
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string",
+      "description": "Nombre del cliente"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de la factura"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Importe total de la factura"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processed"
+      ],
+      "default": "pending",
+      "description": "Estado de la factura"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n o concepto"
+    }
+  },
+  "required": [
+    "customer_name",
+    "date",
+    "amount",
+    "status"
+  ]
+}
